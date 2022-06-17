@@ -4,6 +4,10 @@ function pizzaPizza() {
   this.size = size;
   this.toppings = toppings;
 };
+$(document).ready(function() {
+  let toppingPrice = 0;
+  let toppingHolder = [];
+  let topping = '';
 
 pizzaPizza.prototype.price = function () {
  let price = 0;
@@ -19,8 +23,13 @@ pizzaPizza.prototype.price = function () {
  else if (this.size === "large"){
   price = 14;
  }
- else (this.size === "super duper extra big") 
+  else if (this.size === "super duper extra big"){
+   
    price = 35;
+  }
+  return toppingPrice + this.price;
 
- 
-};
+ } 
+});
+  
+
