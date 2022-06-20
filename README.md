@@ -34,7 +34,7 @@ none yet .
 Describe describe Pizza()
 
 Test:  Pizza() in console 
-Code: console input function
+console input function
 Expected Output: ƒ Pizza() {
   this.size = size;
   this.toppings = toppings;
