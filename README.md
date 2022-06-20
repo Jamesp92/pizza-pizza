@@ -33,10 +33,12 @@ none yet .
 ## test.
 Describe describe pizzaPizza()
 
-Test: type pizzaPizza() in console 
+Test:  pizzaPizza() in console 
 Code: console input function
 Expected Output: ƒ pizzaPizza() {
   this.size = size;
   this.toppings = toppings;
 }
+Test: Pizza.prototype.price = function ()
+code: 
 
