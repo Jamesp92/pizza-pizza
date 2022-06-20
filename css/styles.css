@@ -1,0 +1,26 @@
+#pizzaParlor{
+background-image: url();
+margin-left: 20%;
+margin-right: 20%;
+/* border-radius: 0.3rem; */
+padding:5%;
+color: aqua;
+text-shadow:5px 5px 10px blue;
+}
+
+#order { 
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+body{
+  background-image: url(https://media.istockphoto.com/photos/pizza-shop-signboard-in-front-of-the-store-picture-id927626074?k=20&m=927626074&s=612x612&w=0&h=CVVT-QD3w-E6u_iiruxR9vj5abnMu0ynEUx4ZLbgXKQ=) ;
+}
+h1{
+  color: aqua;
+}
+button{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
