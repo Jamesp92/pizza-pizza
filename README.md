@@ -40,5 +40,5 @@ Expected Output: ƒ pizzaPizza() {
   this.toppings = toppings;
 }
 Test: Pizza.prototype.price = function ()
-code: 
+ gives a different price depending on what size the user inputs .
 
