@@ -1,22 +1,22 @@
  
- // Business Logic for orderBook ---------
-function OrderBook (pizzas,currentId) {
-  this.pizzas = {};
-  this.currentId = 0;
-}
+//  // Business Logic for orderBook ---------
+// function pizzaBook (pizzas,currentId) {
+//   this.pizzas = {};
+//   this.currentId = 0;
+// }
  
-OrderBook.prototype.addPizza = function(pizza) {
-  pizza.id = this.assignId();
-  this.pizzas[pizza.id] = pizza;
-};
+// pizzaBook.prototype.addPizza = function(pizza) {
+//   pizza.id = this.assignId();
+//   this.pizzas[pizza.id] = pizza;
+// };
 
- OrderBook.prototype.assignId = function() {
-  this.currentId += 1;
-  return this.currentId;
-};
+//  pizzaBook.prototype.assignId = function() {
+//   this.currentId += 1;
+//   return this.currentId;
+// };
 
 
-// Bussiness logic for orders
+// // Bussiness logic for orders
 
 function Pizza(size,toppings,toppings2,pizzaPrice) {
   this.size = size;
@@ -70,7 +70,6 @@ Pizza.prototype.price = function () {
 
 // function displayPizzaOrder(displayPizzaOrder) {
 // }
-let newOrder = new OrderBook ();
 
 $(document).ready(function() {
   $("form#pizzaParlor").submit(function(event) {
@@ -80,10 +79,11 @@ $(document).ready(function() {
     let inputtedToppings2 = $("input:radio[name=tops2]:checked").val();
     let finalPizza = new Pizza(inputtedSize, inputtedToppings,inputtedToppings2);
     
-    // finalPizza.price()
-    OrderBook.addPizza(finalPizza);
-    console.log(OrderBook.contacts);
-    console.log(finalPizza,this.pizzas);
+  $("#order").text("your total is $ " + finalPizza.price());
+    finalPizza.price()
     
+    console.log(finalPizza);
+    
+  
   });
 });
