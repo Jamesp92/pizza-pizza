@@ -1,5 +1,5 @@
 # Pizza Shop
-![image](img/pizza.jpg)
+![image](img/pizza.JPG)
 _Author: PJ Perry_
 
 ## Summary:
