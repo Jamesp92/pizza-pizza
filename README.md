@@ -29,8 +29,6 @@ take user input for different types of pizza and return a price specific to the 
 
 
 ## Known bugs:
-works on my local file but doesnt properly function on gh-pages
-
 none yet .
 
 ## test.
