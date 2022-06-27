@@ -39,6 +39,7 @@ function Pizza(size) {
                       });
               return this.pizzaPrice + toppingPrice ;
             }
+          console.log(toppingHolder)
             console.log(toppingPrice)
             let inputtedSize = $(".form-control#pizzaSlice").val();
             let inputtedToppings = $("input:radio[name=tops]:checked").val();
