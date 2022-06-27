@@ -1,10 +1,9 @@
  
 // // Bussiness logic for orders
-
 function Pizza(size) {
   this.size = size;
   this.pizzaPrice = 10;
-
+ 
 };
 
 
@@ -12,6 +11,9 @@ function Pizza(size) {
         $(document).ready(function() {
           $("form#pizzaParlor").submit(function(event) {
             event.preventDefault();
+            let toppingHolder = [];
+            let toppingPrice = 0 ;
+            
             Pizza.prototype.price = function () {
              
               if (this.size === "x-small"){
@@ -32,25 +34,20 @@ function Pizza(size) {
               } else{
                 this.pizzaPrice
               }
-              return this.pizzaPrice;
+              toppingHolder.forEach(() => {
+                        toppingPrice += 2;
+                      });
+              return this.pizzaPrice + toppingPrice ;
             }
+            console.log(toppingPrice)
             let inputtedSize = $(".form-control#pizzaSlice").val();
             let inputtedToppings = $("input:radio[name=tops]:checked").val();
             let inputtedToppings2 = $("input:radio[name=tops2]:checked").val();
             let finalPizza = new Pizza(inputtedSize);
-            
-        
-              this.toppingArray = [inputtedToppings,inputtedToppings2];
-              this.toppingsPrice = 0;
-              this.toppingArray.forEach(() => {
-                this.toppingsPrice += 2;
-              });
-              console.log(this.toppingsPrice)
-              console.log(this.toppingArray)
-            
-          
-            
-            $("#order").text("Your , " + " " + inputtedSize + " , "  +"pizza" + " with  , " + inputtedToppings + " , and , " + inputtedToppings2 + " , will be $"+ finalPizza.price());
+            toppingHolder.push(inputtedToppings,inputtedToppings2)
+            console.log(toppingHolder)
+            console.log(finalPizza)
+            $("#order").text("Your , " + " " + inputtedSize + " , "  +"pizza" + " with  , " + inputtedToppings  + " and " + " " + inputtedToppings2 +", will be $"+ finalPizza.price());
         
   });
 });
